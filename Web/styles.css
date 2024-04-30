@@ -1,0 +1,11 @@
+.Partners{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    max-width: 100px;
+    margin-right: 20px;
+}

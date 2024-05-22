@@ -1,8 +1,7 @@
 .Partners{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .logo{
@@ -10,8 +9,19 @@
     margin-bottom: 50px;
 }
 
-.Partners{
+.LeaderBoard{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
+.nivelar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+  }

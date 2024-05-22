@@ -1,0 +1,173 @@
+* {
+  margin: 7px;
+  padding: 2px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: white;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between; /* Espacio entre los elementos del header */
+  align-items: center;
+  height: 20px;
+  padding: 2px 2%;
+}
+
+.header .logo {
+  cursor: pointer;
+}
+
+.header .logo img {
+  height: 100px;
+  width: auto;
+  transition: all 0.3s;
+}
+
+.header .nav-links {
+  list-style: none;
+}
+
+.header .nav-links li {
+  display: inline-block;
+  padding: 0 2px 0;    
+}
+
+.header .nav-links li:nth-child(1) {
+  padding: 0 20px 0 0;
+}
+
+.header .nav-links li:hover {
+  transform: scale(1.1);
+}
+
+.header .nav-links a {
+  font-size: 700;
+  color: black;
+  text-decoration: none;    
+}
+
+.header .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.user-login {
+  margin-right: 5%; /* Espacio entre el botón y el borde derecho del header */
+}
+
+.btn-login,
+.btn-search {
+  display: inline-block; /* Para que los iconos se muestren en la misma línea */
+}
+
+.btn-login img,
+.btn-search img {
+  width: 30px; /* Ajusta el tamaño de los iconos según sea necesario */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-left: -10px; /* Espacio entre los iconos */
+  cursor: pointer; /* Cambia el cursor al pasar por encima del icono */
+}
+.btn-login img:hover,
+.btn-search img:hover {
+  transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el ratón sobre él */
+}
+.content-below-header {
+  position: absolute;
+  width: 98%;
+  height: 30%; /* Ajusta la altura según tus necesidades */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 9%;
+  width: 99%;
+  height: 250%;
+  object-fit: cover;
+}
+
+.blurred-container {
+  position: absolute;
+  top: 10%;
+  right: 49%;
+  width: 50%;
+  height: 248%;
+  background: linear-gradient(to right, white, rgba(0, 0, 255, 0) 100%);
+}
+
+
+/* Estilos base */
+.first-line {
+  margin-top: 1%; /* Ajusta el espacio entre las líneas */
+  font-size: 4vw; /* Utiliza vw para el tamaño del texto, que se ajusta automáticamente al ancho de la ventana */
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  position: absolute; /* Mantenemos la posición absoluta */
+  top: 62%; /* Ajusta la distancia desde arriba */
+  right: 61%; /* Ajusta la distancia desde la derecha */
+}
+
+.second-line {
+  font-size: 1vw; /* Utiliza vw para el tamaño del texto, que se ajusta automáticamente al ancho de la ventana */
+  margin-top: 1%; /* Ajusta el espacio entre las líneas */
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  text-align: left;
+  top: 135%; /* Ajusta la distancia desde arriba */
+  right: 64%; /* Ajusta la distancia desde la derecha */
+}
+
+.cta-container {
+  position: absolute;
+  top: 62%; /* Ajusta la distancia desde arriba */
+  right: 65%;
+  transform: translateX(-50%); /* Centra horizontalmente el contenedor */
+  z-index: 999; /* Asegura que el contenedor esté por encima de todo */
+}
+
+/* Reglas de medios para pantallas de hasta 768px */
+@media screen and (max-width: 768px) {
+  .first-line {
+    font-size: 6vw; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    right: 50%; /* Ajusta la posición desde la derecha */
+  }
+
+  .second-line {
+    font-size: 2vw; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    right: 55%; /* Ajusta la posición desde la derecha */
+  }
+
+  .cta-container {
+    right: 50%; /* Ajusta la posición desde la derecha */
+  }
+}
+
+
+.cta-button {
+  padding: 10px 20px;
+  font-size: 1vw; /* Utiliza vw para el tamaño del texto, que se ajusta automáticamente al ancho de la ventana */
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #007BFF; /* Ajusta el color del botón según tus necesidades */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+.cta-button:hover {
+  background-color: #0056b3; /* Color del botón al pasar el cursor */
+}
+
+
+
+

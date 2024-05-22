@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio de Sesión</title>
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="login-container">
@@ -16,12 +16,12 @@
             </div>
             <form action="#" method="POST" id="loginForm">
                 <div class="input-group">
-                    <label for="username">Email</label>
+                    <label for="username">Usuario</label>
                     <input type="text" id="username" name="username" required>
                     <div class="underline"></div>
                 </div>
                 <div class="input-group password-group">
-                    <label for="password">Password</label>
+                    <label for="password">Contraseña</label>
                     <input type="password" id="password" name="password" required>
                     <span id="togglePassword" class="toggle-password">Show</span>
                     <div class="underline"></div>
@@ -34,7 +34,7 @@
                     <a href="#" class="forgot-password">Forgot Password?</a>
                 </div>
                 <div class="button-group">
-                    <button type="submit" onclick="window.location.href='GameHomepage.html'">Log In</button>
+                    <button type="submit" onclick="window.location.href='GameHomepage.html'">Ingresar</button>
                 </div>
                 <div class="error-message" id="errorMessage"></div>
             </form>
@@ -52,6 +52,13 @@
             </div>
         </div>
     </div>
+    <div class="Description">
+        <h1>Description:</h1>
+        <!-- Porque deben usar el simulador, en lugar de que estamos desarrollando -->
+        <p>The Legacy of RockWell is a simulator where you make various decisions with the intention of creating an innovative product, utilizing all the services and partners that RockWell Automation has at its disposal.</p>
+        <p>The aim is to generate interest and promote the different services offered by RockWell. We want all users to engage with the simulator, develop their ideas, and understand the philosophy of the digital thread within the company, from the inception of an idea to its development.</p>
+        <p>The simulator is designed to harness what users are interested in developing while using the technologies and services offered by the company. There will be a leaderboard showcasing new ideas, which won't just remain as ideas but can be realized with the help of the simulation. This dynamic approach aims to spark an interest that starts with the game and can grow into something beyond just a game.</p>
+    </div>  
     <script src="script.js"></script>
 </body>
 </html>

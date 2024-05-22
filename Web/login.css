@@ -210,3 +210,14 @@ body {
 .register-box .button-group button:hover {
     background-color: grey;
 }
+
+.Description {
+    position: absolute;
+    top: 66%;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px; /* Añade espacio interno alrededor del texto */
+    background-color: white; /* Opcional: Añade un color de fondo para mayor visibilidad */
+}

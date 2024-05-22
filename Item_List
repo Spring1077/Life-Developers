@@ -1,0 +1,40 @@
+Productos/Servicios (items de juego):
+-“Automaton´s Command Rod”:
+Description: A stylus that grants precise decision making
+Effect: Allows the player to reattempt a question if the first answer was incorrect. it can only be used once every  4 questions
+Related Service: Control Systems (PLCs and DCS)
+
+-Oracle´s Data sphere:
+Description: A pendant that provides deep insights
+Effect: Offers a hint for the most valuable answer, increasing the chance to score 3 points. Usable every 3 questions
+Related service: Information Solutions (MES, Analytics, Data integration)
+
+-Guardian´a Watchful Eye:
+Description: An amulet that watches over the player progress.
+Effect: Alerts the player if they are about to choose an incorrect answer, giving them a chance to reconsider. Once per quiz session
+Related Services: Connected Services (Remote Monitoring, Diagnostics)
+
+-Protector´s Barrier:
+Description: A shield that protectsthe player from losing points
+Effects: Negates the penalty of a wrong answer, ensuring the the player gets 1 point minimum.
+Related Services: Safety Solutions (Machine, Proccess, Electrical Safety/Protection Modules)
+
+-Cipher ward:
+Description: A cloak that clears confusion and distraction
+Effect: Provides a clear and focus mind, reduces the cooldown of other items by half, making them available more frequently. Passive effect?
+Related service(Cyber security Services)
+
+-Conserver Stone:
+Description: A stone that optimizes the use of knowledge
+Effect: Doubles the points earned from a correct answer one per quiz session
+Related Service: Sustainability and Energy management(Factory Talk energy Manager, Sustainability Consulting, Resource Optimization Services)
+
+-Mentors Handbook:
+Description: A book like manual that provides with extra information on the projects and methods
+Effect: Allos the player to study a specific topic for a short duration, guaranteein the next question in that topic to be answered correctly. Usable once per quiz session.
+Related Service: (Training and support)
+
+-Visionary´s Mirror:
+Description: A mirror thaat predicts the best strategy
+Effect: Simmulates different answer choices, showing the outcome of each before the player commits to an answers. Usable every Five questions
+Related Service: (AI, Machine Learning, Digital Twins)

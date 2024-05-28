@@ -1,3 +1,8 @@
+* {
+    margin: 7px;
+    padding: 2px;
+}
+
 body {
     font-family:'Open Sans', sans-serif;
     background-color: #ffffff;
@@ -13,7 +18,7 @@ body {
     align-items: flex-start;
     width: 100%;
     height: 100vh;
-    padding: 30px; /* Reduce el padding para ajustar la posición */
+    padding: 20px; /* Reduce el padding para ajustar la posición */
     gap: 600px; /* Espacio entre los contenedores */
 }
 
@@ -25,10 +30,6 @@ body {
     text-align: left;
 }
 
-.login-header img {
-    max-width: 200px;
-    margin-bottom: 20px;
-}
 
 .login-header h2 {
     margin-bottom: 20px;
@@ -213,11 +214,74 @@ body {
 
 .Description {
     position: absolute;
-    top: 66%;
+    top: 82%;
     margin-left: 150px;
     margin-right: 150px;
-    font-size: 13px;
-    font-family: 'Montserrat', sans-serif;
     padding: 20px; /* Añade espacio interno alrededor del texto */
     background-color: white; /* Opcional: Añade un color de fondo para mayor visibilidad */
 }
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos del header */
+    align-items: center;
+    height: 20px;
+    padding: 2px 2%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+  }
+  
+  .header .logo {
+    cursor: pointer;
+  }
+  
+  .header .logo img {
+    height: 100px;
+    width: auto;
+    transition: all 0.3s;
+  }
+  
+  .header .nav-links {
+    list-style: none;
+  }
+  
+  .header .nav-links li {
+    display: inline-block;
+    padding: 0 2px 0;    
+  }
+  
+  .header .nav-links li:nth-child(1) {
+    padding: 0 20px 0 0;
+  }
+  
+  .header .nav-links li:hover {
+    transform: scale(1.1);
+  }
+  
+  .header .nav-links a {
+    font-size: 700;
+    color: black;
+    text-decoration: none;    
+  }
+  
+  .header .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .user-login {
+    margin-right: 5%; /* Espacio entre el botón y el borde derecho del header */
+  }
+  
+  .btn-search {
+    display: inline-block; /* Para que los iconos se muestren en la misma línea */
+  }
+  
+  .btn-search img {
+    width: 30px; /* Ajusta el tamaño de los iconos según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: -10px; /* Espacio entre los iconos */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del icono */
+  }
+  .btn-search img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el ratón sobre él */
+  }

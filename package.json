@@ -1,0 +1,19 @@
+{
+  "name": "life-developers",
+  "version": "1.0.0",
+  "description": "We are a small developer-team creating a videogame for RockWell Automatic, in which we're going to use the digital threat to inspire and expant our target market.\r ## Project in class TC2005B: Construcción de software y toma de decisiones\r In the class and the project we used HTML, CSS, JS, Node.JS, React, Unity, PosgresSQL and different art aplications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.11.5",
+    "postgresql": "^0.0.1"
+  }
+}

@@ -28,7 +28,7 @@ Related Services: Connected Role-Based Apps for Integrated Enterprise.
 Description: These apps aggregate data from multiple systems into a single portal, providing role-based access and simplifying navigation. They enable faster decision-making, improve collaboration, and reduce the complexity of working with siloed systems.
 
 
--Visionary´s Mirror:
+-Visionary´s Automaton:
 Description: A mirror thaat predicts the best strategy
 Effect: Simmulates different answer choices, showing the outcome of each before the player commits to an answers. Usable every Five questions
 Related Service: (AI, Machine Learning, Digital Twins)

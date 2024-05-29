@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/auth', authRoutes);
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'Homepage.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.use(

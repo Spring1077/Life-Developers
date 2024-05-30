@@ -15,8 +15,8 @@ Effects: Enhances the player's ability to predict outcomes, leading to improved 
 Related Services: Product Lifecycle Intelligence (PLI) with Machine Learning
 Description: PLI uses advanced analytics and machine learning to mine insights from PLM data, improving metrics like design failure prediction, time to market, and part error detection. It helps identify patterns, form predictions, and prescribe improvements to product development processes.
 
--The innovator's Analogical Amulet
-Description: An amulet that grants the wearer the power to boost his creativity and bring products to market with unparalleled efficiency.
+-The innovator's Analogical Ring
+Description: A Ring that grants the wearer the power to boost his creativity and bring products to market with unparalleled efficiency.
 Effects: Boosts points earned by +2 for accurate answers about digital and collaborative environments, if the choosen answer was incorrect it gives them 1 point minimun, Usable Once per quiz.
 Related Services: Digital Product Creation (DPC) for Consumer & Retail Companies
 Description: DPC leverages 3D design tools and other digital capabilities to create, manufacture, and sell products in a virtual, collaborative environment. It enhances time-to-market, sustainability, profits, and reduces costs and waste.

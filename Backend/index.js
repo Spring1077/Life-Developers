@@ -7,26 +7,9 @@ require('dotenv').config();
 
 const app = express();
 
-// Define the whitelist
-const whitelist = [
-    'https://life-developers.vercel.app', // URL of your frontend in Vercel
-    'http://localhost:3000' // Keep localhost for local development
-];
-
-// Configure CORS options
-const corsOptions = {
-    origin: (origin, callback) => {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    credentials: true, // Allow cookies and authorization headers
-};
-
-// Apply the CORS middleware
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: 'https://life-developers.vercel.app' // Solo permite solicitudes desde este origen
+}));
 
 app.use(express.json());
 app.use(cookieParser());

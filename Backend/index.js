@@ -14,7 +14,7 @@ app.get('/',(req,res)=>{
 })
 app.use(
     cors({
-        origin: "https://life-developers.onrender.com/",
+        origin: "https://life-developers.vercel.app/",
         credentials: true,
     })
 );

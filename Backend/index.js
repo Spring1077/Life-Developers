@@ -8,7 +8,8 @@ require('dotenv').config();
 const app = express();
 
 app.use(cors({
-  origin: 'https://life-developers.vercel.app' // Solo permite solicitudes desde este origen
+  origin: 'https://life-developers.vercel.app', // Solo permite solicitudes desde este origen
+  credentials: true // Permitir el uso de credenciales en las solicitudes CORS
 }));
 
 app.use(express.json());

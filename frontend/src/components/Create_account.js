@@ -19,7 +19,7 @@ export default function Create() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://life-developers.onrender.com/User/signup",
+        "http://localhost:4000/User/signup",
         { username, password, company, telephone, first_name, last_name, birth_date, email },
         {
           withCredentials: true,

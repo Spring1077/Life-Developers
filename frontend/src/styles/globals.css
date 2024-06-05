@@ -9,7 +9,7 @@ body {
   justify-content: space-between; /* Espacio entre los elementos del header */
   align-items: center;
   height: 20px;
-  padding: 4px 4%;
+  padding: 1px 3%;
 }
 
 .header .logo {
@@ -19,6 +19,8 @@ body {
 .header .logo img {
   height: 100px;
   width: auto;
+  margin-top: 15px;
+  padding: 0px 40%;
   transition: all 0.3s;
 }
 
@@ -60,9 +62,9 @@ body {
 }
 
 .btn-search img {
-  width: 30px; /* Ajusta el tamaño de los iconos según sea necesario */
   height: auto; /* Mantiene la proporción de la imagen */
   margin-left: -10px; /* Espacio entre los iconos */
+  margin-top: 20px;
   cursor: pointer; /* Cambia el cursor al pasar por encima del icono */
 }
 .btn-login img:hover,
@@ -349,13 +351,7 @@ body {
 }
 
 .register-box .button-group button:hover {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgb(198, 31, 31);
-  width: auto;
-  padding: 10px 20px;
-  margin-top: 20px;
+  background-color: grey;
 }
 .container {
   width: 800px;
@@ -439,20 +435,6 @@ button[type="button"] {
 }
 
 button[type="button"]:hover {
-  background-color: #870000;
-}
-
-button[type="submit"] {
-  background-color: #a40000;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
   background-color: #870000;
 }
 
@@ -580,3 +562,44 @@ tr:hover {
 .signout-btn:hover {
   background-color: #d32f2f;
 }
+
+.container-img {
+  position: absolute; /* Coloca el contenedor de imágenes de manera absoluta */
+  top: 20%; /* Ajusta la posición superior */
+  right: 100px; /* Ajusta la posición derecha */
+  margin-right: 0px;
+}
+
+#images1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+  gap: 60px; /* Espacio entre las imágenes */
+  max-width: 200px; /* Ancho máximo del contenedor */
+}
+
+#images1 img {
+  max-width: 140%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+.controls{
+  position: absolute;
+  left: 80px;
+  top: 12%;
+  text-align: left; /* Alinea el texto a la derecha */
+  font-size: 22px; /* Tamaño de fuente */
+  line-height: 1.1; /* Altura de línea */
+  color: #333; /* Color de texto */
+}
+
+.controls strong {
+  font-weight: bold; /* Hace que el texto sea negrita */
+  display: block; /* Coloca cada línea en una nueva línea */
+}
+
+.controls span {
+  display: block; /* Coloca cada línea en una nueva línea */
+  margin-bottom: 2px; /* Espacio entre cada línea */
+}
+
+

@@ -16,10 +16,12 @@ function unity() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '90vh' // Takes the full height of the viewport
+            height: '80vh', // Toma toda la altura de la ventana
+            width: '100%', // Toma todo el ancho disponible
+            padding: '30px 20px' // Agrega un relleno a los lados para dejar espacio para otros elementos
         }}>
             <Unity unityProvider={unityProvider} style={{ width: 800, height: 600 }} />
-        </div>
+        </div>        
     );
 }
 

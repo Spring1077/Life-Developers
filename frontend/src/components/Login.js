@@ -19,7 +19,7 @@ export default function Login() {
     try {
       console.log("Sending login request...");
       const response = await axios.post(
-        "http://localhost:4000/User/login",
+        "https://life-developers.onrender.com/User/login",
         { username, password },
         {
           withCredentials: true,

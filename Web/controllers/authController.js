@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const path = require('path');
-// Controlador de signup
 
+// Controlador de signup
 exports.signup = async (req, res) => {
   try {
     const { username, email, password, firstName, lastName, birthDate, companyName, phoneNumber, termsAgreed } = req.body;
@@ -33,7 +33,7 @@ exports.login = async (req, res) => {
 
     // Buscamos al usuario en la base de datos por su nombre de usuario
     const user = await User.findOne({ where: { username } });
-    
+
     if (!user || user.password !== password) {
       // Renderizar nuevamente la página HTML con un mensaje de error
       return res.status(500).send('Credenciales inválidas. Inténtalo de nuevo.');
@@ -46,11 +46,21 @@ exports.login = async (req, res) => {
     res.cookie('token', token, { httpOnly: true });
     console.log('Token set:', token); // Registro de la configuración de la cookie
 
-    // Redirigir al usuario a GameHomepage.html después de un inicio de sesión exitoso
-    res.sendFile(path.join(__dirname, '../public', 'GameHomepage.html'));
+    // Redirigir al usuario a index.html después de un inicio de sesión exitoso
+    if (username === 'Admin123' && password === 'Tec123') {
+      return res.redirect('/leaderboard.html');
+    } else {
+      return res.redirect('/GameHomepage.html');
+    }
   } catch (err) {
     // Manejar el error aquí
     console.error(err);
     res.status(500).send('Ha ocurrido un error en el servidor.');
   }
+};
+
+// Controlador de logout
+exports.logout = (req, res) => {
+  res.clearCookie('token');
+  res.status(200).json({ message: 'Logout successful', redirect: '/login.html' });
 };

@@ -12,12 +12,24 @@ app.get('/',(req,res)=>{
     res.send("backend funcionando")
 
 })
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://life-developers.vercel.app"); // URL de tu frontend en Vercel
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-    res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, PATCH, OPTIONS');
-    next();
-  });
+
+const whitelist = [
+    'https://life-developers.vercel.app', // Reemplaza con la URL de tu frontend en Vercel
+    'http://localhost:3000' // Mantén localhost para desarrollo local
+  ];
+  
+  const corsOptions = {
+    origin: (origin, callback) => {
+      if (whitelist.indexOf(origin) !== -1 || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true, // Permitir cookies y encabezados de autorización
+  };
+  
+  app.use(cors(corsOptions));
 
 //app.use(cors());
 app.use(express.json());

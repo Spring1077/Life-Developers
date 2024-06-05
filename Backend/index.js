@@ -14,7 +14,7 @@ app.get('/',(req,res)=>{
 })
 
 const whitelist = [
-    'https://life-developers.vercel.app', // Reemplaza con la URL de tu frontend en Vercel
+    'https://life-developers.vercel.app/', // Reemplaza con la URL de tu frontend en Vercel
     'http://localhost:3000' // Mantén localhost para desarrollo local
   ];
   

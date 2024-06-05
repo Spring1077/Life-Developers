@@ -349,13 +349,7 @@ body {
 }
 
 .register-box .button-group button:hover {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgb(198, 31, 31);
-  width: auto;
-  padding: 10px 20px;
-  margin-top: 20px;
+  background-color: grey;
 }
 .container {
   width: 800px;
@@ -439,6 +433,20 @@ button[type="button"] {
 }
 
 button[type="button"]:hover {
+  background-color: #870000;
+}
+
+button[type="submit"] {
+  background-color: #a40000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
   background-color: #870000;
 }
 

@@ -1,91 +1,90 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Bar } from 'react-chartjs-2';
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
 
-const Leaderboard = () => {
-    const [users, setUsers] = useState([]);
-    const [filteredUsers, setFilteredUsers] = useState([]);
-    const [companyFilters, setCompanyFilters] = useState([]);
-  
-    useEffect(() => {
-      // Cargar los datos de los usuarios al cargar la página
-      loadUsers();
-    }, []);
-  
-    const loadUsers = async () => {
+const Dashboard = () => {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
       try {
-        const response = await fetch('/users');
-        const usersWithDetails = await response.json();
-        setUsers(usersWithDetails);
-        setFilteredUsers(usersWithDetails);
-        populateCompanyFilter(usersWithDetails);
-      } catch (error) {
-        console.error('Error al obtener el leaderboard:', error);
+        const response = await axios.get('https://life-developers.onrender.com/User/dashboard'); 
+        setUsers(response.data);
+        setLoading(false);
+      } catch (err) {
+        console.error('Error fetching users:', err);
+        setError('Error fetching users');
+        setLoading(false);
       }
     };
-  
-    const displayUsers = (users) => {
-      // Lógica para mostrar los usuarios en la tabla
-    };
-  
-    const populateCompanyFilter = (users) => {
-      // Lógica para poblar los filtros de compañía
-    };
-  
-    const getSelectedValues = (filterId) => {
-      // Lógica para obtener los valores seleccionados de los filtros
-    };
-  
-    const applyFilters = () => {
-      // Lógica para aplicar los filtros seleccionados
-    };
-  
-    const toggleFilter = (filterId, arrowElement) => {
-      // Lógica para mostrar y ocultar las opciones de filtro al hacer clic en la flecha
-    };
-  
-    return (
-      <div className="container">
-        <h1>Leaderboard</h1>
-        <table id="leaderboard">
-          <thead>
-            <tr>
-              <th>Usuario</th>
-              <th>
-                <div className="filterContainer">
-                  <div className="filterHeader">
-                    <span>Compañía</span>
-                    <button className="filterArrow" onClick={() => toggleFilter('companyFilter')}>►</button>
-                  </div>
-                  <div className="filterContent" id="companyFilter">
-                    {/* Las opciones de filtro de compañía se agregarán aquí dinámicamente */}
-                  </div>
-                </div>
-              </th>
-              <th>
-                <div className="filterContainer">
-                  <div className="filterHeader">
-                    <span>Estatus</span>
-                    <button className="filterArrow" onClick={() => toggleFilter('statusFilter')}>►</button>
-                  </div>
-                  <div className="filterContent" id="statusFilter">
-                    <label>
-                      <input type="checkbox" value="Activo" onClick={applyFilters} /> Activo
-                    </label>
-                    <label>
-                      <input type="checkbox" value="Inactivo" onClick={applyFilters} /> Inactivo
-                    </label>
-                  </div>
-                </div>
-              </th>
-              <th>Nivel</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* Los datos se agregarán aquí dinámicamente */}
-          </tbody>
-        </table>
-      </div>
-    );
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  // Procesamiento de datos para el gráfico
+  const companyData = users.reduce((acc, user) => {
+    acc[user.company] = (acc[user.company] || 0) + 1;
+    return acc;
+  }, {});
+
+  const chartData = {
+    labels: Object.keys(companyData),
+    datasets: [
+      {
+        label: 'Users per company',
+        data: Object.values(companyData),
+        backgroundColor: '#d32f2f',
+        borderColor: '#d32f2f',
+        borderWidth: 1,
+      },
+    ],
   };
-  
-  export default Leaderboard;
+
+  // Renderizado del componente
+  return (
+    <div> 
+      <div className="chart-container">
+        <Bar data={chartData} />
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Telephone</th>
+            <th>Company</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user) => (
+            <tr key={user.user_id}>
+              <td>{user.first_name}</td>
+              <td>{user.last_name}</td>
+              <td>{user.username}</td>
+              <td>{user.email}</td>
+              <td>{user.telephone}</td>
+              <td>{user.company}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default Dashboard;
+

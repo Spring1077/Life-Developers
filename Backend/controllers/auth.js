@@ -1,4 +1,6 @@
 const User = require('../models/user');
+const Progress = require('../models/progress');
+const Session = require('../models/session');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
@@ -64,5 +66,44 @@ exports.login = async (req, res) => {
     }
   };
   
+  exports.ProgressData = async (req, res) => {
+    try {
+      const { id_item, id_merchant, id_level, finish_date, percentage } = req.body;
+  
+      // Insertar los datos en la base de datos utilizando el modelo Progress
+      const newProgress = await Progress.create({
+        id_item,
+        id_merchant,
+        id_level,
+        finish_date,
+        percentage
+      });
+  
+      res.json({ message: 'Datos insertados correctamente.', progress: newProgress });
+    } catch (error) {
+      console.error('Error al procesar la solicitud:', error);
+      res.status(500).json({ error: 'Error interno del servidor' });
+    }
+  };
+  exports.SessionData = async (req, res) => {
+    try {
+      const { id_user, id_progress, duration_time, start_date_time, finish_date_time, status_s } = req.body;
+  
+      // Insertar los datos en la base de datos utilizando el modelo Session
+      const newSession = await Session.create({
+        id_user,
+        id_progress,
+        duration_time,
+        start_date_time,
+        finish_date_time,
+        status_s
+      });
+  
+      res.json({ message: 'Datos de sesión insertados correctamente.', session: newSession });
+    } catch (error) {
+      console.error('Error al procesar la solicitud:', error);
+      res.status(500).json({ error: 'Error interno del servidor' });
+    }
+  };
   
 

@@ -602,4 +602,35 @@ tr:hover {
   margin-bottom: 2px; /* Espacio entre cada línea */
 }
 
+/* Estilos para el contenedor del gráfico */
+.chart-container {
+  position: fixed;
+  right: 100px;
+  justify-content: center;
+  width: 1000px;
+  height: 400px;
+  margin-top: 220px;
+}
+/* Estilos para el título del gráfico */
+.chart-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+table {
+  position: fixed;
+  margin-top: 20px;
+  right: 130px;
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
 
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}

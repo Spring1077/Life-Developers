@@ -113,7 +113,7 @@ export default function Create() {
               value={company}
               onChange={(e) => setCompany(e.target.value)}
             />
-            <label htmlFor="phone">Phone Number</label>
+            <label htmlFor="phone">Phone Number "(444) 324-3243"</label>
             <input
               type="text"
               id="phone"

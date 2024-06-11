@@ -437,7 +437,19 @@ button[type="button"] {
 button[type="button"]:hover {
   background-color: #870000;
 }
+button{
+  background-color: #a40000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
 
+button:hover {
+  background-color: #870000;
+}
 .password-input {
   border: none;
   border-bottom: 1px solid #ddd;

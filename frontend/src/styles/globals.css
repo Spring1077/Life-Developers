@@ -478,7 +478,7 @@ button[type="button"]:hover {
 
 @media (max-width: 600px) {
   .Description {
-    top: 30%; /* Ajusta la posición superior */
+    top: 50%; /* Ajusta la posición superior */
     left: 5%; /* Ajusta la posición izquierda */
   }
 }

@@ -18,3 +18,12 @@ Acto 3: La Victoria
 En el tercer acto, el protagonista ha transformado su idea inicial en un proyecto visionario y sólido. Ahora, enfrenta su desafío más grande: presentar su proyecto ante Rockwell Automation y otras empresas del sector en un evento crucial. Con el apoyo de sus aliados y la confianza recién descubierta en sí mismo, el protagonista da un paso al frente y presenta su proyecto con pasión y convicción.
 
 El acto culmina con el éxito del protagonista, cuyo proyecto es reconocido como una innovación revolucionaria en el campo de la automatización industrial. Pero más importante aún, el protagonista ha encontrado su lugar en el mundo y ha demostrado que con determinación, coraje y colaboración, cualquier sueño es posible.
+Departamentos:
+- Explore:
+
+- Startup:
+
+- Develop:
+
+- Shipment:
+
